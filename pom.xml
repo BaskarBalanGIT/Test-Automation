@@ -67,6 +67,16 @@
 			<version>5.4.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-spring -->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>7.13.0</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>

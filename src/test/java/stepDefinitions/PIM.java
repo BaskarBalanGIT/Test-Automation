@@ -8,34 +8,47 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.Login;
+import utilities.Base;
 
 public class PIM {
 
+	Base base;
+	WebDriver driver;
+	Login login;
+
+	public PIM(Base base) {
+		this.base = base;
+	}
+
 	@Given("user landed on the homepage")
 	public void user_landed_on_the_homepage() {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-		WebDriver driver = new ChromeDriver(options);
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+		base.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		login = new Login(base);
+		login.enterUserName();
+		login.enterPassword();
+		login.clickLoginButton();
+		
+		;
 
 	}
 
 	@When("user clicked PIM menu")
 	public void user_clicked_pim_menu() {
 		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+
 	}
 
 	@Then("user should see the search options")
 	public void user_should_see_the_search_options() {
 		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+
 	}
 
 	@Then("user should see add user button")
 	public void user_should_see_add_user_button() {
 		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+
 	}
 
 }
