@@ -18,16 +18,16 @@ public class Login {
 	}
 
 	public void enterUserName() {
-		base.getDriver().findElement(uname);
+		base.getDriver().findElement(uname).sendKeys("Admin");
 	}
 
 	public void enterPassword() {
-		base.getDriver().findElement(pwd);
+		base.getDriver().findElement(pwd).sendKeys("admin123");;
 
 	}
 
 	public void clickLoginButton() {
-		base.getDriver().findElement(loginbutton);
+		base.getDriver().findElement(loginbutton).click();;
 
 	}
 

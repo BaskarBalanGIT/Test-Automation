@@ -22,13 +22,14 @@ public class PIM {
 	}
 
 	@Given("user landed on the homepage")
-	public void user_landed_on_the_homepage() {
+	public void user_landed_on_the_homepage() throws InterruptedException {
 		base.getDriver().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		login = new Login(base);
+		Thread.sleep(5000);
 		login.enterUserName();
 		login.enterPassword();
 		login.clickLoginButton();
-		
+
 		;
 
 	}
