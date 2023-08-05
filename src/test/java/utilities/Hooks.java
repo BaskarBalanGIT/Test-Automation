@@ -6,7 +6,7 @@ import io.cucumber.java.Before;
 
 public class Hooks {
 
-	WebDriver driver;
+	//WebDriver driver;
 	Base base;
 
 	public Hooks(Base base) {
